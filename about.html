@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+
+  <!-- TODO 3 - set the visual viewport -->
+  <meta name="viewport" content="width=device-width,  initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/idb.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+
+  <title>OTONEWS</title>
+
+  <!-- TODO 6.1 - include custom Modernizr build -->
+  <script src="modernizr-custom.js"></script>
+
+  <link rel="stylesheet" href="style/temp.css">
+</head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">OTONews</a>
+    </div>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/about">About</a>
+    </div>
+    <!-- <ul class="nav navbar-nav">
+      /* <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>-->
+  </div>
+</nav>
+
+<div class="container">
+ <div class="col">
+        <figure>
+                <img id="sfo" src="images/still_life-1600_large_2x.jpg" 
+            sizes="(max-width: 700px) 90vw, 50vw"
+            srcset="images/still_life-1600_large_2x.jpg 1600w,    
+              images/still_life-800_large_1x.jpg 800w, 
+              images/still_life_medium.jpg 500w"
+              alt="Still Life" class="img-circle">
+        
+            </figure>    
+    
+    <h1 style="text-align:center;">Nama Lengkap</h1>
+    <p>Ari Dwi Nugraha</p>
+ </div>
+ <div class="col">
+        <h1 style="text-align:center;">NIM</h1>
+        <p>165410119</p>
+ </div>
+ <div class="col">
+        <h1 style="text-align:center;">Tentang</h1>
+        <p>Tugas aja</p>
+ </div>
+</div>
+<footer class="container-fluid bg-4 text-center">
+    <p>copyright © 2018 redvelvet| Desain Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+  </footer>
+  
+    <script>
+  
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('redvelvet.js')
+          .then(function(registration) {
+            console.log('Service Worker registration successful with scope: ',
+            registration.scope);
+          })
+          .catch(function(err) {
+            console.log('Service Worker registration failed: ', err);
+          });
+      }
+  
+    </script>
+  </body>
+  </html>
