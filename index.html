@@ -1,168 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title></title>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- style css -->
-	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style/weather.css">
-    <link rel="stylesheet" media="(max-width:600px)" href="style/weather-2-small.css">
-    <link rel="stylesheet" media="(min-width:601px)" href="style/weather-2-large.css">
-	<!-- script js -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Baca.co.id</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-
-<div class="topnav" id="myTopnav">
-  <a href="#home" style="text-align: center;">LOGO</a>
-  <a href="#home" class="active">Weather</a>
-  <div class="search-container">
-  	<form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-  </form>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-
-<div class="col-12">
-<div class="row">
-  <div class="side">
-    <h2>Web Pantau Cuaca (flexbox)</h2>
-    <div class="fakeimg" style="height:205px;"><a target="_blank" rel="nofollow"><img width="205" height="170" border="0" alt="Deskripsi-Gambar" src="style/thankyou.png"/></a></div>
-    <h3>Tugas Kelompok Pemrograman Web Mobile (Responsive Web Design)</h3>
-    <p>Nama - Nama Kelompok :</p>
-    <h4>1. Ari Dwi Nugraha 165410119 - Front end developer</h4>
-    <h4>2. Baital Hakiki 155410169 - Back end developer</h4>
-  </div>
-  <div class="weather-forecast" role="main">
-      <div class="location">New York, NY</div>
-      <div class="date">Tuesday, April 15th</div>
-      <div class="desc">Overcast</div>
-      <div class="current">
-        <div class="visual">
-          <div class="icon cloudy"></div>
-          <div class="temp">58</div>
-          <div class="scale">&deg;F</div>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
         </div>
-        <div class="description">
-          <div class="precip">100%</div>
-          <div class="humidity">97%</div>
-          <div class="wind">4 mph SW</div>
-          <div class="pollen">36</div>
-        </div>
-      </div>
-      <div class="seven-day">
-        <div class="seven-day-fc">
-          <div class="date">Today</div>
-          <div class="icon thunder"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">68&deg;</div>
-            <div class="temp-low">36&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Wednesday</div>
-          <div class="icon sunny"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">50&deg;</div>
-            <div class="temp-low">39&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Thursday</div>
-          <div class="icon sunny"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">55&deg;</div>
-            <div class="temp-low">39&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Friday</div>
-          <div class="icon pc"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">54&deg;</div>
-            <div class="temp-low">43&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Saturday</div>
-          <div class="icon sshowers"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">64&deg;</div>
-            <div class="temp-low">46&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Sunday</div>
-          <div class="icon sshowers"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">64&deg;</div>
-            <div class="temp-low">50&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-        <div class="seven-day-fc">
-          <div class="date">Monday</div>
-          <div class="icon pc"></div>
-          <div class="seven-day-temp">
-            <div class="temp-high">61&deg;</div>
-            <div class="temp-low">50&deg;</div>
-          </div>
-          <div class="pcount">36</div>
-        </div>
-      </div>
     </div>
-    <script>
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-52746336-1');ga('send','pageview');
-  var isCompleted = {};
-  function sampleCompleted(sampleName){
-    if (ga && !isCompleted.hasOwnProperty(sampleName)) {
-      ga('send', 'event', 'WebCentralSample', sampleName, 'completed'); 
-      isCompleted[sampleName] = true;
-    }
-  }
-</script>
-    <script type="text/javascript">
-      function init() {
-        window.matchMedia("(min-width: 600px)").addListener(hitMQ);
-      }
 
-      function hitMQ(evt) {
-        sampleCompleted("RWDFundamentals-Weather2");
-      }
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
 
-      init();
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container-fluid h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 col-sm-4">
+                        <!-- Logo Area -->
+                        <div class="logo-area">
+                            </hr>
+                            <a href="index.html"><img src="img/core-img/logo1.png" width="100" height="80" alt=""></a>
+                        </div>
+                    </div>
+                        <div class="col-12 col-sm-8">
+                        <div class="top-add-area text-right">
+                            <a href="index.html"><h1 style="color: #ffffff">.co.id</h1></a>
+                        </div>
+                        </div>
+                  
+                </div>
+            </div>
+        </div>
 
-    </script>
-</div>
-</div>
+        <!-- Navbar Area -->
+        <div class="videomag-main-menu" id="sticker">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container-fluid">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="videomagNav">
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
 
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li class="active"><a href="index.html">Beranda</a></li>
+                                    <li><a href="video-post.html">Berita</a></li>
+                                    <li><a href="#">Halaman</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="video-post.html">Kesehatan</a></li>
+                                            <li><a href="single-post.html">Umum</a></li>
+                                            <li><a href="contact.html">Olahraga</a></li>
+                                            <li><a href="contact.html">Teknologi</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+
+                        <!-- Top Search Area -->
+                        <div class="top-search-area">
+                            <form action="#" method="post">
+                                <input type="search" name="top-search" id="topSearch" placeholder="Cari">
+                                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </form>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <div class="hero-area d-flex flex-wrap">
+
+        <div class="hero-single-section">
+            <!-- Single Welcome Post -->
+            <div class="single-welcome-post bg-img item1 wow fadeInUp" data-wow-delay="300ms" style="background-image: url(img/bg-img/rekor-maut-dunia-corona-di-as-bunuh-1-169-orang-dalam-24-jam-auP-thumb.jpg);">
+                <!-- Play Button -->
+               
+                <!-- Content -->
+                <div class="welcome-post-content">
+                    <!-- Single Blog Post -->
+                    <div class="single-blog-post white">
+                        <div class="blog-content">
+                            <a href="#" class="post-tag">Kesehatan</a>
+                            <a href="#" class="post-title">Rekor Maut Dunia Corona Di AS Bunuh 1.169 Orang Dalam 24 Jam</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-single-section">
+            <!-- Single Welcome Post -->
+            <div class="single-welcome-post bg-img item2 wow fadeInUp" data-wow-delay="400ms" style="background-image: url(img/bg-img/kajian-bin-bulan-juli-puncak-penyebaran-virus-corona-5zM-thumb.jpg);">
+                <!-- Content -->
+                <div class="welcome-post-content">
+                    <!-- Single Blog Post -->
+                    <div class="single-blog-post white">
+                        <div class="blog-content">
+                            <a href="#" class="post-tag">Umum</a>
+                            <a href="#" class="post-title">Kajian BIN Bulan Juli Puncak Penyebaran Virus Corona</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-second-section d-flex flex-wrap">
+                <!-- Single Welcome Post -->
+                <div class="single-welcome-post bg-img item3 wow fadeInUp" data-wow-delay="500ms" style="background-image: url(img/bg-img/Akibat-Coronavirus-Microsoft-Batalkan-Event-Microsoft-Ignite-218x150.jpg);">
+                    <!-- Content -->
+                    <div class="welcome-post-content">
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style2 white">
+                            <div class="blog-content">
+                                <a href="#" class="post-tag">Teknologi</a>
+                                <a href="#" class="post-title">Akibat Coronavirus Microsoft Batalkan Event Microsoft Ignite</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Welcome Post -->
+                <div class="single-welcome-post bg-img item4 wow fadeInUp" data-wow-delay="600ms" style="background-image: url(img/bg-img/ngotot-bahas-ruu-cipta-kerja-pemerintah-dan-dpr-dinilai-sama-sama-keras-kepala-Dw1-thumb.jpg);">
+                    <!-- Content -->
+                    <div class="welcome-post-content">
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style2 white">
+                            <div class="blog-content">
+                                <a href="#" class="post-tag">Umum</a>
+                                <a href="#" class="post-title">Ngotot bahas RUU Cipta Kerja Pemerintah Dan DPR Dinilai Sama-sama Keras Kepala</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ##### Hero Area End ##### -->
+
+    <!-- ##### Tabs Area Start ##### -->
+    <div class="video-mag-tabs-area mt-50 wow fadeInUp" data-wow-delay="200ms">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="latest-tab" data-toggle="tab" href="#latest" role="tab" aria-controls="latest" aria-selected="true">Terakhir Dilihat</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="top-viewed-tab" data-toggle="tab" href="#top-viewed" role="tab" aria-controls="top-viewed" aria-selected="false">Sering DIbaca</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="videos-tab" data-toggle="tab" href="#videos" role="tab" aria-controls="videos" aria-selected="false">Umum</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="latest" role="tabpanel" aria-labelledby="latest-tab">
+                            <div class="latest-videos-slide owl-carousel">
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post style2">
+                                    <div class="blog-thumb mb-30">
+                                        <img src="img/bg-img/ini-syarat-valentino-rossi-pensiun-dari-motogp-fKn-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <a href="#" class="post-tag">Olahrag</a>
+                                        <a href="#" class="post-title">Ini Syarat Valentino Rossi Pensiun Dari Motogp</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post style2">
+                                    <div class="blog-thumb mb-30">
+                                        <img src="img/bg-img/akui-19-pdp-corona-meninggal-rshs-bandung-bantah-penumpukan-jenazah-g7p-thumb.jpg" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <a href="#" class="post-tag">Kesehatan</a>
+                                        <a href="#" class="post-title">Akui 19 PDP Corona Meninggal RS HS Bandung Bantah Penumpukan Jenazah</a>
+                                    </div>
+                                </div>
+
+                                <!-- Single Blog Post -->
+                                <div class="single-blog-post style2">
+                                    <div class="blog-thumb mb-30">
+                                        <img src="img/bg-img/Microsoft-Tambahkan-Opsi-Share-Baru-Di-File-Explorer-Windows-10-1-218x150.jpg" alt="">
+                                    </div>
+                                    <div class="blog-content">
+                                        <a href="#" class="post-tag">Teknologi</a>
+                                        <a href="#" class="post-title">Microsoft Tambahkan Opsi Share Baru Di File Explorer Windows 10</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Tabs Area End ##### -->
+
+    <!-- ##### Small Videos Area Start ##### -->
+    <section class="small-videos-area">
+        <div class="container">
+            <div class="small-videos-content">
+                <div class="row">
+
+                    <!-- Fashion News -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="section-heading wow fadeInUp" data-wow-delay="200ms">
+                            <h2>Kesehatan</h2>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style2 mb-50 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="blog-thumb mb-5">
+                               <img src="img/bg-img/china-lockdown.jpeg" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <a href="#" class="post-title">China Lockdown Kota Jia Usai Pendatang Positif Corona</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Technology News -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="section-heading wow fadeInUp" data-wow-delay="200ms">
+                            <h2>Olahraga</h2>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style2 mb-50 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="blog-thumb mb-5">
+                                <img src="img/bg-img/wakil-indonesia-cbg-badminton.jpeg" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <a href="#" class="post-title">PBSI: Delapan Wakil Indonesia ke Olimpiade 2020</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- July Top News -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="section-heading wow fadeInUp" data-wow-delay="200ms">
+                            <h2>Lainnya</h2>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style4 d-flex mb-30 wow fadeInUp" data-wow-delay="300ms">
+                            <div class="blog-thumb">
+                                <img src="img/bg-img/hukum.jpeg" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <a href="#" class="post-tag">Umum</a>
+                                <a href="#" class="post-title">Polisi Tangkap Driver Ojol Penghina Jokowi</a>
+                            </div>
+                        </div>
+
+                        <!-- Single Blog Post -->
+                        <div class="single-blog-post style4 d-flex mb-30 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="blog-thumb">
+                                <img src="img/bg-img/jahe-merah.jpg" alt="">
+                            </div>
+                            <div class="blog-content">
+                                <a href="#" class="post-tag">Umum</a>
+                                <a href="#" class="post-title">Kasus Corona Meningkat, Harga Jahe Merah Melesat 5 Kali Lipat</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Small Videos Area End ##### -->
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area section-padding-100">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <!-- Footer Content -->
+                <div class="col-12 col-lg-4">
+                    <div class="footer-content">
+                        <!-- Logo -->
+                        <a href="index.html" class="foo-logo"><h1 style="color: #ffffff">Baca.co.id</h1></a>
+                        <p>Baca Berita</p>
+                        <div class="footer-social-info d-flex">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-whatsapp"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer Content -->
+                <div class="col-12 col-lg-7 col-xl-6">
+                    <div class="footer-content d-flex flex-wrap">
+                        <!-- Footer Nav -->
+                        <div class="footer-nav">
+                            <h5 class="widget-title">Usefull Links</h5>
+                            <nav>
+                                <ul>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Umum</a></li>
+                                    <li><a href="#">Kesehatan</a></li>
+                                    <li><a href="#">Olahraga</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Footer Nav -->
+                        <div class="footer-nav">
+                            <h5 class="widget-title">Keterangan</h5>
+                            <nav>
+                                <ul>
+                                    <li><a href="#"><h5 class="widget-title">Nama-nama Kelompok :</h5></a></li>
+                                    <li><a href="#"><h5 class="widget-title">-  (165410119) Ari Dwi Nugraha -> sebagai front-end</h5></a></li>
+                                    <li><a href="#"><h5 class="widget-title">-  (155410169) Baital Hakiki -> sebagai back-end</h5></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
 </body>
+
 </html>
