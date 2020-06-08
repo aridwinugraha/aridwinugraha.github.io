@@ -6,7 +6,19 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="description" content="@Batja.co.id">
+    <!-- theme-color defines the top bar color (green in my case)-->
+    <meta name="theme-color" content="#084f19" />
+    <!-- Add to home screen for Safari on iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="@Batja.co.id" />
+    <link rel="apple-touch-icon" href="img/core-img/logo128.png" />
+    <!-- Add to home screen for Windows-->
+    <meta name="msapplication-TileImage" content=img/core-img/logo128.png" />
+    <meta name="msapplication-TileColor" content="#000000" />
+    <!-- The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
     <title>Baca.co.id</title>
@@ -76,14 +88,14 @@
                             <div class="classynav">
                                 <ul>
                                     <li class="active"><a href="index.html">Beranda</a></li>
-                                    <li><a href="video-post.html">Berita</a></li>
+                                    <li><a href="#">Berita</a></li>
                                     <li><a href="#">Halaman</a>
                                         <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
-                                            <li><a href="video-post.html">Kesehatan</a></li>
-                                            <li><a href="single-post.html">Umum</a></li>
-                                            <li><a href="contact.html">Olahraga</a></li>
-                                            <li><a href="contact.html">Teknologi</a></li>
+                                            <li><a href="#">Kesehatan</a></li>
+                                            <li><a href="#">Umum</a></li>
+                                            <li><a href="#">Olahraga</a></li>
+                                            <li><a href="#">Teknologi</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -95,7 +107,7 @@
                         <div class="top-search-area">
                             <form action="#" method="post">
                                 <input type="search" name="top-search" id="topSearch" placeholder="Cari">
-                                <button type="submit" class="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </div>
                     </nav>
@@ -328,7 +340,7 @@
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-whatsapp"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-github"></i></a>
+                            <a href="https://github.com/aridwinugraha"><i class="fa fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -362,6 +374,26 @@
                 </div>
             </div>
     </footer>
+    <script>
+     if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function() {
+            navigator.serviceWorker
+              .register("batja.sw.js")
+              .then(function() {
+                console.log("Pendaftaran ServiceWorker berhasil");
+              })
+              .catch(function() {
+                console.log("Pendaftaran ServiceWorker gagal");
+              });
+          });
+        } else {
+          console.log("ServiceWorker belum didukung browser ini.");
+        }
+  
+        document.addEventListener("DOMContentLoaded", function() {
+          var page = window.location.hash.substr(1);
+        });
+      </script>
     <!-- ##### Footer Area End ##### -->
 
     <!-- ##### All Javascript Script ##### -->

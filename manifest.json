@@ -1,0 +1,21 @@
+{
+  "name": "@Batja.co.id",
+  "short_name": "Batja",
+  "description": "News Web Page",
+  "lang": "en-US",
+  "dir": "ltr",
+  "theme_color": "#258a00",
+  "start_url": ".",
+  "background_color": "#000",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "icons": [{
+    "src": "img/core-img/logo72.png",
+    "sizes": "72x72",
+    "type": "image/png"
+   }, {
+    "src": "img/core-img/logo512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+   }]
+ }
